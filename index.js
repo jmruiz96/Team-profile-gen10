@@ -74,7 +74,7 @@ const managerInq = () => {
             },
         ])
         .then((ans) => {
-            managerInfo(ans);
+            managerDetails(ans);
             newEmployeeInq();
         })
 }
@@ -123,7 +123,7 @@ const engineerInq = () => {
             },
         ])
         .then((ans) => {
-            engineerInfo(ans);
+            engineerDetails(ans);
             newEmployeeInq();
         })
 }
@@ -173,22 +173,22 @@ const internInq = () => {
             },
         ])
         .then((ans) => {
-            internInfo(ans);
+            internDetails(ans);
             newEmployeeInq();
         })
 }
-const managerInfo = (ans) => {
+const managerDetails = (ans) => {
     let { name, id, email, officeNumber } = ans;
     let manager = new Manager(name, +id, email, +officeNumber); 
     employees.push(manager);}
 
-const engineerInfo = (ans) => {
+const engineerDetails = (ans) => {
     let { name, id, email, github } = ans;
     let engineer = new Engineer(name, +id, email, github);
     employees.push(engineer); 
 }
 
-const internInfo = (ans) => { 
+const internDetails = (ans) => { 
     let { name, id, email, school } = ans;
     let intern = new Intern(name, +id, email, school);
     employees.push(intern); 
@@ -204,7 +204,7 @@ const newEmployeeInq = () => {
                 choices: ["Engineer", "Intern", "That's all"],
             }
         ]).then((ans) => {
-            switch (ans.addEmployee) {
+            switch (ans.newEmployee) {
                 case "That's all":
                     fs.writeFile("./dist/index.html", renderHtml(), ((err) => err ? console.error(err) : console.log("Successfully created Html")));
                     break;
