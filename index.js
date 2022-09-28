@@ -1,12 +1,9 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const { default: Choice } = require('inquirer/lib/objects/choice.js');
-const { default: Choices } = require('inquirer/lib/objects/choices.js');
-const { listenerCount } = require('process');
 const Engineer = require('./lib/Engineer.js')
 const Intern = require('./lib/Intern.js');
 const Manager = require('./lib/Manager.js')
-var employess = [];
+var employees = [];
 
 const init = () => {
     inquirer
