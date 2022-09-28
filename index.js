@@ -45,6 +45,7 @@ const managerInq = () => {
                         return false
                     }
                 }
+                 //matt showed me this, apperently there is a weird glitch with the number input 
             },
             {
                 type: "input",
@@ -181,6 +182,7 @@ const managerDetails = (ans) => {
     let { name, id, email, officeNumber } = ans;
     let manager = new Manager(name, +id, email, +officeNumber); 
     employees.push(manager);}
+    //push is the right method to get those new guys inthere.
 
 const engineerDetails = (ans) => {
     let { name, id, email, github } = ans;
@@ -227,6 +229,7 @@ const renderHtml = () => {
     </div>
 </body>
 </html>`
+//this is what is the endcap of the html and that div closes the row section allowing the cards to be flexed.
     return html;
 }
 

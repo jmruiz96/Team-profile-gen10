@@ -1,3 +1,4 @@
+//was provided by the instructors
 const Manager = require("../lib/Manager");
 const Employee = require("../lib/Employee");
 
