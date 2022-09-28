@@ -6,9 +6,9 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [Contributing](#contributing)
+- [Contributors](#contributing)
 - [Tests](#tests)
-- [Contact](#contact)
+
 
 ## Description
 - This is a a challenge using node.js to create an html page from the backend.
@@ -19,7 +19,7 @@
 You will need to download inquirer and use the built in fs.
 
 ## Usage
-The user will enter 'node index.js' and then will be prompted to answer various questions about each team member. The user will have to be a supervisor or manager.
+The user will enter 'node index.js' and then will be prompted to answer various questions about each team member. The user will have to be a manager. After you see successgully created html, open the html file in the dist folder, then open that HTML in default broswer.
 [![Watch the video](./img/Screen%20Shot%202022-09-27%20at%209.58.00%20PM.png)](https://watch.screencastify.com/v/htY7Le1HJtO8lz7o87Lt)
 
 ## License

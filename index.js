@@ -16,14 +16,14 @@ const init = () => {
         ])
         .then((ans) => {
             if (ans.position === "Manager"){
-                managerInq()
+                managerPrompt()
             } else {
                 console.log("This application starts with the team Manager.");
                 process.exit();
             }
         })
 }
-const managerInq = () => { 
+const managerPrompt = () => { 
     inquirer
         .prompt([
             {
@@ -76,11 +76,11 @@ const managerInq = () => {
         ])
         .then((ans) => {
             managerDetails(ans);
-            newEmployeeInq();
+            newEmployeePrompt();
         })
 }
 
-const engineerInq = () => { 
+const engineerPrompt = () => { 
     inquirer
         .prompt([
             {
@@ -125,11 +125,11 @@ const engineerInq = () => {
         ])
         .then((ans) => {
             engineerDetails(ans);
-            newEmployeeInq();
+            newEmployeePrompt();
         })
 }
 
-const internInq = () => { 
+const internPrompt = () => { 
     inquirer
         .prompt([
             {
@@ -175,7 +175,7 @@ const internInq = () => {
         ])
         .then((ans) => {
             internDetails(ans);
-            newEmployeeInq();
+            newEmployeePrompt();
         })
 }
 const managerDetails = (ans) => {
@@ -196,7 +196,7 @@ const internDetails = (ans) => {
     employees.push(intern); 
 }
 
-const newEmployeeInq = () => { 
+const newEmployeePrompt = () => { 
     inquirer
         .prompt([
             {
@@ -211,10 +211,10 @@ const newEmployeeInq = () => {
                     fs.writeFile("./dist/index.html", renderHtml(), ((err) => err ? console.error(err) : console.log("Successfully created Html")));
                     break;
                 case "Engineer":
-                    engineerInq()
+                    engineerPrompt()
                     break;
                 case "Intern":
-                    internInq()
+                    internPrompt()
                     break;
             }
         })
